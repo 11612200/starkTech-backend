@@ -24,6 +24,7 @@ class LoginPageComponent extends Component{
     // };
 
     onChange=(event,name)=>{
+      
         const loginData ={...this.state.loginData};
         loginData[name]=event.target.value;
         this.setState({
