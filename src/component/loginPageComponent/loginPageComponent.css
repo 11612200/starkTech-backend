@@ -1,0 +1,21 @@
+.inputClass{
+    width: 300px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    border-style: ridge;
+}
+
+.div-main{
+    width:500px;
+
+}
+.div-form{
+    padding:20px;
+    background-color: azure;
+
+}
+.body{
+    background: black;
+
+}
