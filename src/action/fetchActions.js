@@ -19,6 +19,8 @@ export const receive_error = () =>{
     };
 };
 
+
+
 export const thunk_action_creator = (userData) => {
     store.dispatch(fetch_post(userData));
     console.log(userData);

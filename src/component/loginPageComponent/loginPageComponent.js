@@ -40,6 +40,8 @@ class LoginPageComponent extends Component{
         this.props.thunk_action_creator(loginData);
     }
 
+    
+
 // postData=()=> {
 //     console.log("data here", this.state, this.state.UserDetails, this.state.UserDetails)
 //     if(this.state.confirm_password === this.state.password) {
