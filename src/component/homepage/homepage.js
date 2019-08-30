@@ -36,18 +36,18 @@ function HandleDownvote(postID) {
 
 
 
-function HandleComment(postID,userID){
-    fetch(`//localhost:8080/posts/${postID}/comments/${userID}`, {method: 'POST', body:JSON.stringify(this.state.commentData),
-    headers:
-    {
-        'Content-Type':'application/json'
-    },
-    mode:'cors',})
-        .then(data => data.json())
-        .then(data =>{
-           window.location = window.location.href;
-        })
-}
+// functionHandleComment=(postID,userID)=> {
+//     fetch(`//localhost:8080/posts/${postID}/comments/${userID}`, {method: 'POST', body:JSON.stringify(this.state.commentData),
+//     headers:
+//     {
+//         'Content-Type':'application/json'
+//     },
+//     mode:'cors',})
+//         .then(data => data.json())
+//         .then(data =>{
+//            window.location = window.location.href;
+//         })
+// }
 
 
 
@@ -65,17 +65,17 @@ class LoginPage extends Component{
         })
     }
 
-    onChange=(event,name)=>{
+    // onChange=(event,name)=>{
       
-        const commentData ={...this.state.posts};
-        commentData[name]=event.target.value;
-        // loginData['postdate']=LocalDate.now();
-        // loginData[]
-        this.setState({
-            commentData
-        });
+    //     const commentData ={...this.state.posts};
+    //     commentData[name]=event.target.value;
+    //     // loginData['postdate']=LocalDate.now();
+    //     // loginData[]
+    //     this.setState({
+    //         commentData
+    //     });
     
-    }
+    // }
 
    
 
@@ -108,13 +108,13 @@ class LoginPage extends Component{
                                     <button className="btn btn-sm btn-primary" onClick={ ()=> {HandleDownvote(row.id)} }>Downvotes {row.downvote} </button>
                                 </div>
 
-
+{/* 
                                 <div className="comment-div">
                             <input type="textarea" placeholder="&nbsp;&nbsp;Type Comment..." className="inputClass" namae="description"  onChange={(event)=> this.onChange(event,'decription')}/>
                             <button className="buttonClass" style={{backgroundColor: "#193382", color: "white"}} type="button"  onClick={ ()=> {HandleComment(row.id,row.users.id)} } >
                             post
                         </button>
-                        </div>
+                        </div> */}
                             </div>
 
                             
