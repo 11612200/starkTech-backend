@@ -77,6 +77,13 @@ class LoginPage extends Component{
     
     // }
 
+
+
+handleCreateClick = () => {
+    console.log('clicked')
+    this.props.history.push('/home');
+  };
+  
    
 
     render() {
