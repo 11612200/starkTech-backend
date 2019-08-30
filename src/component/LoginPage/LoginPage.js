@@ -30,17 +30,18 @@ class LoginPage extends Component{
     {
         console.log("suno")
         return(
-            <div className="row" style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
+            <div className="row" style={{display: 'flex', marginTop: 50}}>
                 <div className="col-9">
                     <img alt="body-logo" src={BodyLogo}/>
                 </div>
-                <div className="col-3" style={{backgroundColor: 'white', height: 400, borderRadius: 10, marginTop: 150, width: 340, marginLeft: 70}}>
+                <div className="col-3" style={{backgroundColor: 'white', height: 210, borderRadius: 10, marginTop: 300, width: 340, marginLeft: 70}}>
                     <div><img alt="heading-logo" src={HeadingLogo}  /></div>
                     <input type="text" placeholder="&nbsp;&nbsp;Email" className="inputClass" name="email_id"   onChange={this.handleEditChange}/>
                     <input type="password" placeholder="&nbsp;&nbsp;Password" className="inputClass" name="password"   onChange={this.handleEditChange}/>
-                    <button className="inputClass" style={{backgroundColor: "#193382", color: "white"}} type="button"  onClick={this.postData}>
+                    <button className="buttonClass" style={{backgroundColor: "#193382", color: "white"}} type="button"  onClick={this.postData}>
                         Login
                     </button>
+                    &nbsp;&nbsp;<a href="/">Sign Up</a>
                 </div>
             </div>
         )

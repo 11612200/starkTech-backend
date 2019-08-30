@@ -19,6 +19,12 @@ export const receive_error = () =>{
     };
 };
 
+export const all_post = () => {
+    return {
+        type: "Fetching All Posts"
+    };
+};
+
 
 
 export const thunk_action_creator = (userData) => {
@@ -44,6 +50,20 @@ export const thunk_action_creator = (userData) => {
             else dispatch(receive_post(data));
         })
         .catch(err => dispatch(receive_error()));
+    };
+}
+
+export const thunk_fetch_allposts = () => {
+    store.dispatch(all_post());
+    return function(dispatch, getState){
+        return fetch(`//localhost:8080/allposts`)
+        .then(data => data.json())
+        .then(data =>{
+           // console.log(data)
+        })
+        .catch(err => {
+            console.log(err)
+        });
     };
 }
 

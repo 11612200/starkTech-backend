@@ -96,7 +96,7 @@ class LoginPageComponent extends Component{
 render()
 {
     return(
-        <div className="row" style={{display: 'flex', justifyContent: 'center', marginTop: 50}}>
+        <div className="row" style={{display: 'flex', marginTop: 50}}>
             <div className="col-9">
                 <img alt="body-logo" src={BodyLogo}/>
             </div>
@@ -122,9 +122,10 @@ render()
                 <input type="text" placeholder="&nbsp;&nbsp;Date Of Birth" className="inputClass" name="dob"    onChange={(event)=> this.onChange(event,'dob')}/>
                 <input type="password" placeholder="&nbsp;&nbsp;Password" className="inputClass" name="password" onChange={(event)=> this.onChange(event,'encryptedPass')}  />
                 <input type="password" placeholder="&nbsp;&nbsp;Confirm Password" className="inputClass" name="confirm_password" onChange={(event)=> this.onChange(event,'ConfirmPassword')}/>
-                <button className="inputClass" style={{backgroundColor: "#193382", color: "white"}} type="button"  onClick={this.onSubmit}>
+                <button className="buttonClass" style={{backgroundColor: "#193382", color: "white"}} type="button"  onClick={this.onSubmit}>
                     Sign Up
                 </button>
+                &nbsp;&nbsp;<a href="/sign-in">Log In</a>
             </div>
 
 
