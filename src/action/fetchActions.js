@@ -56,7 +56,9 @@ export const thunk_action_creator = (userData) => {
 export const thunk_fetch_allposts = () => {
     store.dispatch(all_post());
     return function(dispatch, getState){
-        return fetch(`//localhost:8080/allposts`)
+        return fetch(`//localhost:8080/allposts`,{
+            method:'GET',
+        })
         .then(data => data.json())
         .then(data =>{
            // console.log(data)
@@ -89,3 +91,24 @@ export const thunk_fetch_allposts = () => {
 //         });
 //     }
 // }
+
+
+export const thuck_fetch_upvote =postID =>{
+    return function(dispatch, getState){
+        return fetch('http://localhost:8080/posts{postid}/upvotes',{
+            method:'PUT',
+            headers:{
+                'Accept': 'application/json',
+              'Content-Type': 'application/json',
+                
+            }
+        })
+        .then(response => {
+            console.log(response)
+        })
+        .catch(err => {
+            console.log(err)
+        });
+
+    }
+}

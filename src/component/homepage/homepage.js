@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 import './homepage.css';
-import {thunk_fetch_allposts} from '../../action/fetchActions';
+import {thunk_fetch_allposts,thunk_fetch_upvote} from '../../action/fetchActions';
 import Sidebar from '../sidebar/sidebar';
 import Header from '../header/header';
 import {connect} from 'react-redux';
+// import { threadId } from 'worker_threads';
 
-function HandleUpvote(postID) {
-    fetch(`//localhost:8080/user/posts/${postID}/upvotes`, {method: 'PUT'})
-        .then(data => data.json())
-        .then(data =>{
-           window.location = window.location.href;
-        })
-}
+// function HandleUpvote(postID) {
+//     fetch(`//localhost:8080/user/posts/${postID}/upvotes`, {method: 'PUT'})
+//         .then(data => data.json())
+//         .then(data =>{
+//            window.location = window.location.href;
+//         })
+// }
 
 function HandleDownvote(postID) {
     fetch(`//localhost:8080/posts/${postID}/downvotes`, {method: 'PUT'})
@@ -50,6 +51,12 @@ function HandleDownvote(postID) {
 // }
 
 
+function HandleUpvote(postID){
+    this.thunk_fetch_upvote(postID);
+    //this.state.thunk_fetch_upvote(postID);
+}
+
+
 
 class LoginPage extends Component{
     constructor(props) {
@@ -64,6 +71,9 @@ class LoginPage extends Component{
            this.setState({posts: data})
         })
     }
+
+
+
 
     // onChange=(event,name)=>{
       

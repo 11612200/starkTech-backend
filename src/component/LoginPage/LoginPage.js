@@ -39,7 +39,7 @@ class LoginPage extends Component{
                     <input type="text" placeholder="&nbsp;&nbsp;Email" className="inputClass" name="email_id"   onChange={this.handleEditChange}/>
                     <input type="password" placeholder="&nbsp;&nbsp;Password" className="inputClass" name="password"   onChange={this.handleEditChange}/>
                     <button className="buttonClass" style={{backgroundColor: "#193382", color: "white"}} type="button"  onClick={this.postData}>
-                        Login
+                      <a href ="/home" > Login </a>
                     </button>
                     &nbsp;&nbsp;<a href="/">Sign Up</a>
                 </div>
